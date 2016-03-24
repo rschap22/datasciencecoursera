@@ -44,5 +44,3 @@ full_data <- cbind(x_data, labels_data, subject_data)
 
 ##Create a data set with the average of each variable for each activity and each subject
 averages_data <- ddply(full_data, .(subject, activity), function(x) colMeans(x[, 1:66]))
-
-write.table(averages_data, "averages_data.txt", row.name=FALSE)
